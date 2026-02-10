@@ -1,0 +1,67 @@
+<ion-content class="register-content">
+
+  <div class="register-container">
+
+    <h1 class="title">Registro</h1>
+
+    <!-- Nombre -->
+    <ion-item class="input-box">
+      <ion-input
+        placeholder="Nombre"
+        type="text">
+      </ion-input>
+    </ion-item>
+
+    <!-- Correo -->
+    <ion-item class="input-box">
+      <ion-input
+        placeholder="Correo electrónico"
+        type="email">
+      </ion-input>
+    </ion-item>
+
+    <!-- Contraseña -->
+    <ion-item class="input-box">
+      <ion-input
+        placeholder="Contraseña"
+        type="password">
+      </ion-input>
+    </ion-item>
+
+    <!-- Selector de rol -->
+    <div class="role-selector">
+
+      <button
+        class="role"
+        [class.active]="selectedRole === 'cliente'"
+        (click)="selectRole('cliente')">
+        Cliente
+      </button>
+
+      <button
+        class="role"
+        [class.active]="selectedRole === 'vendedor'"
+        (click)="selectRole('vendedor')">
+        Vendedor
+      </button>
+
+    </div>
+
+    <!-- Botón registrar -->
+    <ion-button
+      expand="block"
+      class="register-button">
+      Registrarse
+    </ion-button>
+
+    <ion-button
+     fill="clear"
+     routerLink="/home"
+     class="back-login">
+      Ya tengo cuenta
+    </ion-button>
+
+
+  </div>
+
+</ion-content>
