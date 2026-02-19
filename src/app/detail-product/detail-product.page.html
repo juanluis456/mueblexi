@@ -1,0 +1,39 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: transparent; position: absolute; top: 0; z-index: 10;">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" style="--background: rgba(0,0,0,0.5); --border-radius: 50%; color: white;">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <div class="product-image">
+    <img [src]="product.image" alt="{{ product.name }}">
+  </div>
+
+  <div class="detail-container">
+    
+    <div class="header-info">
+      <h1 class="product-title">{{ product.name }}</h1>
+      <h2 class="product-price">${{ product.price | number:'1.2-2' }}</h2>
+    </div>
+
+    <div class="description-section">
+      <h3>Descripción</h3>
+      <p>{{ product.description }}</p>
+    </div>
+
+    <ion-button expand="block" color="primary" class="history-btn" (click)="viewHistory()">
+      Consultar Historial de Abonos
+    </ion-button>
+
+    <ion-button expand="block" color="danger" class="ion-margin-top" routerLink="/payment-history/1">
+      [TEST] Ir Directo al Historial
+    </ion-button>
+
+  </div>
+
+</ion-content>

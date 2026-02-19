@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: var(--ion-background-color);">
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()" color="light">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="color: white; font-weight: bold;">Historial de Pagos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <div class="summary-card">
+    <h2>{{ productName }}</h2>
+    <p>Total Abonado:</p>
+    <div class="total-amount">${{ totalPaid | number:'1.2-2' }}</div>
+  </div>
+
+  <h3 class="section-title">Detalle de movimientos</h3>
+
+  <div class="history-list">
+    <div class="payment-item" *ngFor="let p of payments">
+      
+      <div class="payment-icon">
+        <ion-icon name="cash-outline"></ion-icon>
+      </div>
+
+      <div class="payment-info">
+        <div class="payment-date">{{ p.date | date:'dd/MM/yyyy' }}</div>
+        <div class="payment-label">Abono realizado</div>
+      </div>
+
+      <div class="payment-amount">
+        + ${{ p.amount | number:'1.2-2' }}
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="payments.length === 0" class="ion-text-center ion-padding">
+    <p style="color: #888;">No hay abonos registrados aún.</p>
+  </div>
+
+</ion-content>
