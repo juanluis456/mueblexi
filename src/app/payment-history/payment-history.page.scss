@@ -1,0 +1,92 @@
+ion-content {
+  --background: var(--ion-background-color);
+}
+
+/* Tarjeta de Resumen Superior */
+.summary-card {
+  background: linear-gradient(135deg, var(--ion-color-primary), #8e4e14); /* Degradado Naranja/Marrón */
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+
+  h2 {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    opacity: 0.9;
+  }
+
+  p {
+    color: white;
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  .total-amount {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 5px;
+  }
+}
+
+.section-title {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+/* Lista de Pagos */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-item {
+  background-color: var(--mueblexi-card-background);
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ion-color-primary);
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.payment-info {
+  flex: 1;
+}
+
+.payment-date {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.payment-label {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.payment-amount {
+  color: #2ecc71; /* Verde para indicar ingreso de dinero */
+  font-weight: bold;
+  font-size: 1.1rem;
+}

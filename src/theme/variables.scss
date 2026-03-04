@@ -1,0 +1,30 @@
+// For information on how to create your own theme, please refer to:
+// https://ionicframework.com/docs/theming/
+/* Definición de colores personalizados basados en el diseño oscuro */
+:root {
+  /* Fondo general de la aplicación */
+  --ion-background-color: #2c2c2c; 
+  
+  /* Fondo de las tarjetas contenedoras */
+  --mueblexi-card-background: #3a3a3a;
+  
+  /* Fondo de los inputs */
+  --mueblexi-input-background: #4f4f4f;
+  
+  /* Color de acento (Naranja/Marrón) para botones */
+  /* Puedes ajustar este código hexadecimal para que sea más marrón si lo prefieres */
+  --ion-color-primary: #e67e22; 
+  --ion-color-primary-rgb: 230, 126, 34;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #ca6f1e;
+  --ion-color-primary-tint: #ed8f3c;
+
+  /* Color de texto general */
+  --ion-text-color: #ffffff;
+}
+
+/* Asegura que los componentes Ionic usen el color de texto blanco por defecto */
+ion-content, ion-item, ion-label, ion-input, h1, p, a {
+  color: var(--ion-text-color);
+}

@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: transparent;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+  <div class="content-center">
+    
+    <h1 class="main-title">Crear Cuenta</h1>
+    <p class="sub-title">Únete a Mueblexi</p>
+
+    <div class="form-card">
+      <ion-item lines="none">
+        <ion-label position="floating">Nombre completo</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.nombre"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="userData.correo"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+      </ion-item>
+
+      <p class="role-label">¿Cómo quieres usar Mueblexi?</p>
+      <ion-segment [(ngModel)]="userData.rol" color="primary" class="role-segment ion-margin-bottom">
+        <ion-segment-button value="cliente">
+          <ion-label>Cliente</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="vendedor">
+          <ion-label>Vendedor</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+
+      <ion-button expand="block" color="primary" class="ion-margin-top register-button" (click)="register()">
+        Registrarse
+      </ion-button>
+
+      <div class="ion-text-center ion-margin-top login-link">
+        ¿Ya tienes cuenta? 
+        <a routerLink="/home">Inicia sesión</a>
+      </div>
+    </div>
+
+  </div>
+</ion-content>

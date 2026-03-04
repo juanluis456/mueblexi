@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+  <div class="content-center">
+    
+    <h1 class="main-title">Mueblexi</h1>
+    <p class="sub-title">Bienvenido de nuevo</p>
+
+    <div class="form-card">
+     <h2 class="card-title">Iniciar Sesión</h2>
+    
+     <ion-item lines="none">
+  <ion-label position="floating">Correo electrónico</ion-label>
+  <ion-input type="email" [(ngModel)]="credentials.email"></ion-input>
+</ion-item>
+      <ion-item lines="none">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="credentials.password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" color="primary" class="ion-margin-top login-button" (click)="login()">
+        Entrar
+      </ion-button>
+
+      <div class="ion-text-center ion-margin-top register-link">
+        ¿No tienes cuenta? 
+        <a routerLink="/register">Regístrate</a>
+      </div>
+    </div>
+
+  </div>
+</ion-content>
