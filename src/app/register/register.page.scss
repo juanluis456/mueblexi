@@ -1,72 +1,55 @@
-/* ===== CONTENEDOR GENERAL ===== */
-.register-content {
-  --background: #f7f2ec;
-}
+/* Estilos específicos para la página de Registro */
 
-.register-container {
-  max-width: 380px;
-  margin: auto;
-  margin-top: 70px;
-  text-align: center;
-}
-
-/* ===== TÍTULO ===== */
-.title {
-  color: #8b5a2b;
-  font-size: 34px;
-  font-weight: bold;
-  margin-bottom: 35px;
-}
-
-/* ===== INPUTS ===== */
-.input-box {
-  --background: transparent;
-  border: 2px solid #8b5a2b;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  padding-left: 10px;
-}
-
-ion-input {
-  color: #8b5a2b;
-  --placeholder-color: #b08a6a;
-}
-
-/* ===== SELECTOR CLIENTE / VENDEDOR ===== */
-.role-selector {
+.content-center {
   display: flex;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 25px 0;
-  border: 2px solid #8b5a2b;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100% - 56px); /* Resta la altura del header */
 }
 
-.role {
-  flex: 1;
-  padding: 14px;
-  background: transparent;
-  border: none;
-  color: #8b5a2b;
-  font-size: 16px;
+.main-title {
+  font-size: 2.2rem;
   font-weight: bold;
-  cursor: pointer;
+  margin-bottom: 5px;
 }
 
-.role.active {
-  background: linear-gradient(135deg, #8b5a2b, #6d3f1d);
-  color: white;
+.sub-title {
+  font-size: 1.1rem;
+  color: #cccccc;
+  margin-bottom: 20px;
 }
 
-/* ===== BOTÓN REGISTRARSE ===== */
+.role-label {
+  text-align: left;
+  color: #cccccc;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.role-segment {
+  --background: var(--mueblexi-input-background);
+  border-radius: 8px;
+  
+  ion-segment-button {
+    --color: #cccccc;
+    --color-checked: white;
+    --indicator-color: var(--ion-color-primary);
+  }
+}
+
 .register-button {
-  --background: linear-gradient(135deg, #8b5a2b, #6d3f1d);
-  --border-radius: 16px;
-  height: 52px;
-  font-size: 18px;
-  margin-top: 20px;
+  --border-radius: 8px;
+  font-weight: bold;
+  height: 50px;
 }
-.back-login {
-  margin-top: 16px;
-  color: #8b4f1d;
-  font-weight: 500;
+
+.login-link {
+  color: #cccccc;
+  font-size: 0.9rem;
+  
+  a {
+    color: var(--ion-color-primary);
+    text-decoration: none;
+    font-weight: bold;
+  }
 }

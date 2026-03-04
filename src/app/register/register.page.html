@@ -1,67 +1,52 @@
-<ion-content class="register-content">
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: transparent;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <div class="register-container">
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+  <div class="content-center">
+    
+    <h1 class="main-title">Crear Cuenta</h1>
+    <p class="sub-title">Únete a Mueblexi</p>
 
-    <h1 class="title">Registro</h1>
+    <div class="form-card">
+      <ion-item lines="none">
+        <ion-label position="floating">Nombre completo</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.nombre"></ion-input>
+      </ion-item>
 
-    <!-- Nombre -->
-    <ion-item class="input-box">
-      <ion-input
-        placeholder="Nombre"
-        type="text">
-      </ion-input>
-    </ion-item>
+      <ion-item lines="none">
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="userData.correo"></ion-input>
+      </ion-item>
 
-    <!-- Correo -->
-    <ion-item class="input-box">
-      <ion-input
-        placeholder="Correo electrónico"
-        type="email">
-      </ion-input>
-    </ion-item>
+      <ion-item lines="none">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+      </ion-item>
 
-    <!-- Contraseña -->
-    <ion-item class="input-box">
-      <ion-input
-        placeholder="Contraseña"
-        type="password">
-      </ion-input>
-    </ion-item>
+      <p class="role-label">¿Cómo quieres usar Mueblexi?</p>
+      <ion-segment [(ngModel)]="userData.rol" color="primary" class="role-segment ion-margin-bottom">
+        <ion-segment-button value="cliente">
+          <ion-label>Cliente</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="vendedor">
+          <ion-label>Vendedor</ion-label>
+        </ion-segment-button>
+      </ion-segment>
 
-    <!-- Selector de rol -->
-    <div class="role-selector">
+      <ion-button expand="block" color="primary" class="ion-margin-top register-button" (click)="register()">
+        Registrarse
+      </ion-button>
 
-      <button
-        class="role"
-        [class.active]="selectedRole === 'cliente'"
-        (click)="selectRole('cliente')">
-        Cliente
-      </button>
-
-      <button
-        class="role"
-        [class.active]="selectedRole === 'vendedor'"
-        (click)="selectRole('vendedor')">
-        Vendedor
-      </button>
-
+      <div class="ion-text-center ion-margin-top login-link">
+        ¿Ya tienes cuenta? 
+        <a routerLink="/home">Inicia sesión</a>
+      </div>
     </div>
 
-    <!-- Botón registrar -->
-    <ion-button
-      expand="block"
-      class="register-button">
-      Registrarse
-    </ion-button>
-
-    <ion-button
-     fill="clear"
-     routerLink="/home"
-     class="back-login">
-      Ya tengo cuenta
-    </ion-button>
-
-
   </div>
-
 </ion-content>
